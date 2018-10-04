@@ -1,11 +1,48 @@
 <template>
   <section class="b-page b-shop">
-    <a href="https://cdn.shopify.com/s/files/1/1318/9779/products/LTD_SIR_CROP_1024x1024.jpg?v=1481804370" class="b-shop__book">
-      <img class="b-shop__book__cover" src="" alt="">
-      <p class="b-shop__book__text">The Raid, 2018 <span></span></p>
-    </a>
+    <nuxt-link to="#" class="b-shop__book">
+      <img class="b-shop__book__cover" src="~/assets/book-bilal.jpg" alt="">
+      <p class="b-shop__book__text">The Raid, 2018 <span class="b-shop__book__text__price">60.00€</span></p>
+    </nuxt-link>
   </section>
 </template>
+
+<style lang="scss">
+  .b-shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    
+    &__book {
+      text-decoration: none;
+      z-index: 200;
+      &__cover {
+        width: 180px;
+        height: auto;
+      }
+      &__text {
+        margin-top: 10px;
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: 'Helvetica Neue';
+        font-size: 16px;
+        &__price {
+          font-weight: bold;
+          font-size: 15px;
+        }
+      }
+    }
+    
+    
+    
+  }
+</style>
 
 <script>
   
@@ -31,38 +68,3 @@
   }
 </script>
 
-<style lang="scss">
-  .b-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    width: 100%;
-    height: 100%;
-    
-    &__central-text {
-      color: black;
-      font-size: 15px;
-      font-weight: 800;
-      font-family: 'Helvetica Neue';
-      text-align: center;
-      line-height: 20px;
-      z-index: 105;
-
-      a {
-        color: black;
-        text-decoration: none;
-      }
-    }
-    &__bottom-text {
-      color: black;
-      font-size: 13px;
-      font-family: 'Helvetica Neue';
-      text-align: center;
-      position: absolute;
-      bottom: 30px;
-    }
-    
-  }
-</style>

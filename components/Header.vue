@@ -3,7 +3,7 @@
     <div class="b-header__nav">
       <nuxt-link v-if="currentPage == 'index'" to="/film" class="b-header__nav__film b-link" href="#">Film</nuxt-link>
       <nuxt-link v-else to="/" class="b-header__nav__studio b-link" href="#">Studio</nuxt-link>
-      <nuxt-link v-if="currentPage != 'about'" to="/" class="b-header__nav__logo b-logo" href="#">Bilal El Kadhi</nuxt-link>
+      <nuxt-link v-if="pageWithNoLogo" to="/" class="b-header__nav__logo b-logo">Bilal El Kadhi</nuxt-link>
       <nuxt-link to="/about" class="b-header__nav__contact b-link">Contact</nuxt-link>
     </div>
   </header>
@@ -14,12 +14,22 @@
   import { mapMutations } from 'vuex'
 
   export default {
+    created(){
+      console.log(this.$route.name)
+    },
     computed: {
       ...mapGetters({
         logoIsHidden: 'modules/menu/logoIsHidden'
       }),
       pageFilm(){
         return this.$route.name == 'film'
+      },
+      pageWithNoLogo(){
+        let bool = true;
+        if (this.$route.name == 'about' || this.$route.name == 'shop'){
+         bool = false;
+        }
+        return bool;
       },
       currentPage(){
         return this.$route.name
@@ -47,7 +57,7 @@
       top: 10px;
 
       @media screen and (min-width: 768px){
-        top: calc(50% - 35px);
+        top: calc(50% - 35px); 
       }
     }
     
