@@ -53,7 +53,7 @@
       return {
         title: 'Shop - Bilal El Kadhi',
         meta: [
-          { hid: 'description', name: 'Shop', content: 'Buy the book, The Raid 2018' }
+          { hid: 'shop', name: 'description', content: 'Buy the book. The Raid 2018 by Bilal El Kadhi' }
         ]
       }
     },

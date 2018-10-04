@@ -17,7 +17,7 @@
       return {
         title: 'About - Bilal El Kadhi',
         meta: [
-          { hid: 'description', name: 'description', content: 'Page about ' }
+          { hid: 'about', name: 'description', content: 'About Bilal El Kadhi' }
         ]
       }
     },

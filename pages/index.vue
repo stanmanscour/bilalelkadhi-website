@@ -57,7 +57,10 @@
   export default {
     head(){
       return {
-        title: 'Photography | Bilal El Kadhi'
+        title: 'Home - Bilal El Kadhi',
+        meta: [
+          { hid: "home", name: "description", content: "Bilal El Kadhi's official website" }
+        ]
       }
     },
     data(){
