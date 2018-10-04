@@ -1,9 +1,9 @@
 <template>
   <section class="b-page b-shop">
-    <nuxt-link to="#" class="b-shop__book">
+    <a href="https://www.amazon.fr/gp/product/B07C3Y8T1J/ref=as_li_tl?ie=UTF8&camp=1642&creative=6746&creativeASIN=B07C3Y8T1J&linkCode=as2&tag=smanscour-21&linkId=ebb29b97b2c41b8c9b80c6e09cd5df1f" class="b-shop__book">
       <img class="b-shop__book__cover" src="~/assets/book-bilal.jpg" alt="">
       <p class="b-shop__book__text">The Raid, 2018 <span class="b-shop__book__text__price">60.00€</span></p>
-    </nuxt-link>
+    </a>
   </section>
 </template>
 
