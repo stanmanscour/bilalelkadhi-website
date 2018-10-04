@@ -5,6 +5,7 @@
       <nuxt-link v-else to="/" class="b-header__nav__studio b-link" href="#">Studio</nuxt-link>
       <nuxt-link v-if="pageWithNoLogo" to="/" class="b-header__nav__logo b-logo">Bilal El Kadhi</nuxt-link>
       <nuxt-link to="/about" class="b-header__nav__contact b-link">Contact</nuxt-link>
+      <nuxt-link to="/shop" class="none">shop</nuxt-link>
     </div>
   </header>
 </template>
@@ -39,6 +40,9 @@
 </script>
 
 <style lang="scss">
+  .none {
+    display: none;
+  }
   .b-header {
     z-index: 100;
     position: fixed;
